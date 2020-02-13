@@ -1,25 +1,25 @@
 ## logging postfixes ##
 
 .logDebug : log debug message
-	java.lang.String    [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.debug($expr$)
-	java.lang.Throwable [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.debug(() -> $expr$.getMessage(),$exception:variableOfType("java.lang.Throwable")$)
+	java.lang.String    [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.debug($expr$$END$);
+	java.lang.Throwable [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.debug(() -> $expr$.getMessage(), $exception:variableOfType("java.lang.Throwable")$);
 
 .logError : log error message
-	java.lang.String    [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.debug($expr$)
-	java.lang.Throwable [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.debug(() -> $expr$.getMessage(),$exception:variableOfType("java.lang.Throwable")$)
+	java.lang.String    [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.error($expr$$END$);
+	java.lang.Throwable [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.error(() -> $expr$.getMessage(), $exception:variableOfType("java.lang.Throwable")$);
 
 .logFatal : log fatal message
-	java.lang.String    [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.debug($expr$)
-	java.lang.Throwable [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.debug(() -> $expr$.getMessage(),$exception:variableOfType("java.lang.Throwable")$)
+	java.lang.String    [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.fatal($expr$$END$);
+	java.lang.Throwable [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.fatal(() -> $expr$.getMessage(), $exception:variableOfType("java.lang.Throwable")$);
 
 .logInfo : log info message
-	java.lang.String    [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.debug($expr$)
-	java.lang.Throwable [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.debug(() -> $expr$.getMessage(),$exception:variableOfType("java.lang.Throwable")$)
+	java.lang.String    [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.info($expr$$END$);
+	java.lang.Throwable [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.info(() -> $expr$.getMessage(), $exception:variableOfType("java.lang.Throwable")$);
 
 .logTrace : log trace message
-	java.lang.String    [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.debug($expr$)
-	java.lang.Throwable [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.debug(() -> $expr$.getMessage(),$exception:variableOfType("java.lang.Throwable")$)
+	java.lang.String    [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.trace($expr$$END$);
+	java.lang.Throwable [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.trace(() -> $expr$.getMessage(), $exception:variableOfType("java.lang.Throwable")$);
 
 .logWarn : log warn message
-	java.lang.String    [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.debug($expr$)
-	java.lang.Throwable [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.debug(() -> $expr$.getMessage(),$exception:variableOfType("java.lang.Throwable")$)
+	java.lang.String    [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.warn($expr$$END$);
+	java.lang.Throwable [org.slf4j.Logger] →  $log*:variableOfType("org.slf4j.Logger"):"LOG"$.warn(() -> $expr$.getMessage(), $exception:variableOfType("java.lang.Throwable")$);
